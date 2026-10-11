@@ -1,0 +1,14 @@
+services:
+  redis: 
+    image: redis:7.4-alpine
+    container_name: e-commerce-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - cache:/data
+
+
+volumes:
+  cache:
+    driver: local
