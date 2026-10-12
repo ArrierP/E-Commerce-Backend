@@ -3,10 +3,6 @@ import { AuthService } from "./auth.service.js";
 import type { LoginInput, RegisterInput, RefreshTokenInput } from "./auth.schema.js";
 import { logger } from "../../shared/config/logger.js";
 import { AppError } from "../../shared/middlewares/error.middleware.js";
-import { User } from "./auth.model.js";
-import { mailQueue } from "../../shared/utils/mail.js";
-import crypto from 'crypto'
-
 export class AuthController {
   static async login(req: Request<{}, {}, LoginInput>, res: Response, next: NextFunction) {
     try {

@@ -1,9 +1,9 @@
 import { Worker, Job } from "bullmq";
-import { redisConnect } from "../../../shared/config/bullmq.js";
-import { INVENTORY_QUEUE_NAME } from "../queues/inventory.queue.js";
-import { queueMail } from "../../../shared/utils/mail.js";
-import { Inventory, type IInventory } from "../inventory.model.js";
-import { logger } from "../../../shared/config/logger.js";
+import { redisConnect } from "../config/bullmq.js";
+import { INVENTORY_QUEUE_NAME } from "../utils/queue.js";
+import { queueMail } from "../utils/queue.js";
+import { Inventory, type IInventory } from "../../modules/inventory/inventory.model.js";
+import { logger } from "../config/logger.js";
 import type { Types } from 'mongoose'
 
 

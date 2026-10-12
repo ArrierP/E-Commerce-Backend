@@ -5,7 +5,7 @@ import bcrypt from "bcryptjs";
 import { AppError } from "../../shared/middlewares/error.middleware.js";
 import { redisClient } from "../../shared/config/redis.js";
 import crypto from "crypto";
-import { mailQueue } from "../../shared/utils/mail.js";
+import { mailQueue } from "../../shared/utils/queue.js";
 
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET! || ""
 const REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET! || ""

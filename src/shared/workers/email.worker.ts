@@ -2,7 +2,7 @@ import { Worker, type Job } from "bullmq";
 import { redisConnect } from "../config/bullmq.js";
 import { resend, DEFAULT_MAIL_FROM } from "../config/resend.js";
 import { logger } from "../config/logger.js";
-import { MAIL_QUEUE_NAME, type SendEmailJobData } from "../utils/mail.js";
+import { MAIL_QUEUE_NAME, type SendEmailJobData } from "../utils/queue.js";
 
 export const emailWorker = new Worker<SendEmailJobData>(
   MAIL_QUEUE_NAME,

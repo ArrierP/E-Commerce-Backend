@@ -2,9 +2,9 @@ import "dotenv/config";
 import app from "./app.js";
 import { connectDb } from "./shared/database/connectDb.js";
 import { connectRedis } from "./shared/config/redis.js";
-import "./modules/inventory/workers/inventory.worker.js";
+import '../src/shared/workers/inventory.worker.js'
 import "./shared/workers/email.worker.js";
-import { setupLowStockCron } from "./modules/inventory/queues/inventory.queue.js";
+import { setupLowStockCron } from "./shared/utils/queue.js";
 
 const PORT = process.env.PORT || 5000;
 
